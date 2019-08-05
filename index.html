@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <title>Post Try</title>
+</head>
+
+<body class="bg-primary">
+
+    <div class="container pb-4">
+
+        <!-- Si no está conectado, te pide que te conectes. -->
+        <div class="col col-sm-10 col-md-6 col-lg-4 mx-auto p-0">
+            <button id="sign-in-button" class="btn shadow-sm mt-2 w-100">Conectarse</button>
+            <button id="sign-out-button" class="btn shadow-sm mt-2 w-100 hide">Desconectarse</button>
+        </div>
+
+        <!-- Crear post. -->
+        <div id="crear-post" class="border border-light rounded col col-sm-10 col-md-6 col-lg-4 mt-2 hide mx-auto">
+            <div class="mt-1">
+                <h4 class="mx-auto text-center pb-1">
+                    Añadir nuevo tema
+                </h4>
+            </div>
+            <form>
+
+                <div class="form-group">
+                    <label for="usr">Titulo:</label>
+                    <input type="text" class="form-control" id="new-post-title">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Contenido:</label>
+                    <textarea class="form-control" rows="2" id="new-post-message"></textarea>
+                </div>
+                <button type="submit" class="btn" id='add-post-btn'>Agregar</button>
+                
+            </form>
+        </div>
+        <!-- Todos los temas y comentarios. -->
+        <div id="post-container" class="col col-sm-10 col-md-6 col-lg-4 mx-auto p-0">
+
+            <!-- TODOS LOS POST Y COMENTARIOS -->
+            <div id="recent-posts-list">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="/__/firebase/6.3.4/firebase-app.js"></script>
+    <script src="/__/firebase/5.10.1/firebase-auth.js"></script>
+    <script src="/__/firebase/5.10.1/firebase-database.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <script src="controldb.js"></script>
+
+</body>
+
+</html>
